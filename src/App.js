@@ -323,8 +323,8 @@ function WhyChooseUs() {
               <div className="why-feature-item">
                 <FaAward className="why-icon" />
                 <div>
-                  <h4>5+ Years Experience</h4>
-                  <p>Trusted by 200+ happy clients</p>
+                  <h4>2+ Years Experience</h4>
+                  <p>Trusted by 100+ happy clients</p>
                 </div>
               </div>
             </div>
