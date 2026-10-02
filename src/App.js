@@ -814,6 +814,22 @@ function Footer() {
   );
 }
 
+// Floating WhatsApp Button
+function WhatsAppFloat() {
+  return (
+    <a 
+      href={SITE_CONFIG.whatsapp} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="whatsapp-float"
+      aria-label="Chat on WhatsApp"
+    >
+      <FaWhatsapp />
+      <span className="whatsapp-tooltip">Chat with us!</span>
+    </a>
+  );
+}
+
 // ============================================
 // 🚀 MAIN APP
 // ============================================
@@ -831,6 +847,7 @@ function App() {
       <CallToAction />
       <Contact />
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
