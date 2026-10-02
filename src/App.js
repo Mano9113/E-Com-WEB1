@@ -165,10 +165,10 @@ const TESTIMONIALS = [
 // 📊 STATS DATA
 // ============================================
 const STATS = [
-  { value: "500+", label: "Projects" },
-  { value: "200+", label: "Happy Clients" },
-  { value: "50+", label: "Team Members" },
-  { value: "5+", label: "Years Experience" }
+  { value: "100+", label: "Projects" },
+  { value: "100+", label: "Happy Clients" },
+  { value: "20+", label: "Team Members" },
+  { value: "2+", label: "Years Experience" }
 ];
 
 // ============================================
