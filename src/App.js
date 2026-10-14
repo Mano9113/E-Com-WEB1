@@ -13,9 +13,9 @@ import './styles.css';
 // ============================================
 const SITE_CONFIG = {
   name: "Bee Altitude",
-  tagline: "Production | Talents | Events | Digital Campaign",
-  slogan: "We Provide Great Ideas to GROW YOUR BUSINESS!",
-  description: "The best solution for the progress of your business",
+  tagline: "Events | Production | Talents | Wedding | Entertainment",
+  slogan: "Your Complete Event Management Partner",
+  description: "Professional event management services for all occasions",
   phone: "+91 8073797153",
   email: "beealtitude@gmail.com",
   instagram: "https://instagram.com/beealtitude",
@@ -29,54 +29,138 @@ const SITE_CONFIG = {
 };
 
 // ============================================
-// 📋 SERVICES DATA
+// 📋 SERVICES DATA - Complete from Client PDF
 // ============================================
 const SERVICES = [
   {
+    id: "events",
+    icon: <FaStar />,
+    title: "Events",
+    category: "Events",
+    description: "Complete event management solutions for all your corporate and personal celebrations.",
+    features: [
+      "Corporate Events",
+      "Festival Decoration", 
+      "Award Ceremony",
+      "Birthday Plans",
+      "Manpower Management",
+      "Corporate Gifts",
+      "Interior Decoration"
+    ]
+  },
+  {
+    id: "production",
     icon: <FaVideo />,
-    title: "Promotional Videos & Reels",
-    description: "Eye-catching promotional videos and reels that capture attention and drive engagement for your brand.",
-    features: ["Video Production", "Reels Creation", "Ad Films"]
+    title: "Production",
+    category: "Production",
+    description: "Professional stage setup and production services for impactful events.",
+    features: [
+      "Stage Setup",
+      "Sound Systems",
+      "Lighting Setup",
+      "LED Screens",
+      "Technical Production",
+      "AV Equipment"
+    ]
   },
   {
-    icon: <FaGlobe />,
-    title: "Website Development & SEO",
-    description: "Professional websites optimized for search engines to boost your online presence and visibility.",
-    features: ["Custom Websites", "SEO Optimization", "Responsive Design"]
+    id: "talents",
+    icon: <FaCrown />,
+    title: "Talents",
+    category: "Talents",
+    description: "Skilled performers and professionals to make your events memorable.",
+    features: [
+      "Entertainment Performance",
+      "Emcee Activity",
+      "Dance Performance",
+      "Singing Performance",
+      "Art Performance",
+      "Live Bands"
+    ]
   },
   {
-    icon: <FaHashtag />,
-    title: "Social Media Management",
-    description: "Complete social media handling to grow your brand presence across all platforms.",
-    features: ["Content Strategy", "Daily Posts", "Engagement Growth"]
+    id: "wedding",
+    icon: <FaGem />,
+    title: "Wedding Events",
+    category: "Wedding",
+    description: "Complete wedding planning from venue to photography, making your special day perfect.",
+    features: [
+      "Back to Agenda",
+      "Wedding Hall",
+      "Wedding Decoration",
+      "Wedding Photography",
+      "Wedding Videography",
+      "Dance, Singing & Art"
+    ]
   },
   {
+    id: "entertainment",
     icon: <FaBullhorn />,
-    title: "Online Digital Campaign",
-    description: "Strategic digital marketing campaigns that deliver results and maximize your ROI.",
-    features: ["Google Ads", "Facebook Ads", "Lead Generation"]
+    title: "Entertainment Events",
+    category: "Entertainment",
+    description: "Exciting entertainment solutions including celebrity events and launching ceremonies.",
+    features: [
+      "Food Stall",
+      "Music Events",
+      "Dance Events",
+      "Celebrity Events",
+      "Launching Events",
+      "Stage Setup"
+    ]
   },
   {
+    id: "photography",
     icon: <FaCamera />,
-    title: "AD Shoot & Editing",
-    description: "Professional photo and video shoots with expert editing for stunning visual content.",
-    features: ["Product Shoots", "Video Editing", "Post Production"]
+    title: "Photography & Videography",
+    category: "Photography",
+    description: "Professional photo and video coverage to capture your precious moments forever.",
+    features: [
+      "Event Photography",
+      "Wedding Photography",
+      "Event Videography",
+      "Wedding Videography",
+      "Drone Coverage",
+      "Photo Editing"
+    ]
   },
   {
-    icon: <FaPaintBrush />,
-    title: "Graphic Designing",
-    description: "Creative graphic designs including posters, banners, and brand identity materials.",
-    features: ["Posters & Banners", "Brand Identity", "Marketing Materials"]
+    id: "hosters",
+    icon: <FaAward />,
+    title: "Hosters & Hospitality",
+    category: "Hosters",
+    description: "Trained staff and hosters for seamless event execution including catering services.",
+    features: [
+      "Event Hosters",
+      "Hospitality Staff",
+      "Lunch Service",
+      "Snacks Service",
+      "Dinner Service",
+      "Catering Management"
+    ]
+  },
+  {
+    id: "digital",
+    icon: <FaHashtag />,
+    title: "Digital Campaign",
+    category: "Digital",
+    description: "Strategic digital marketing to promote your events and reach wider audiences.",
+    features: [
+      "Social Media Marketing",
+      "Online Promotion",
+      "Brand Marketing",
+      "Content Creation",
+      "Influencer Marketing",
+      "Ad Campaigns"
+    ]
   }
 ];
 
 // ============================================
-// 💰 PRICING PACKAGES
+// 💰 DIGITAL MARKETING PACKAGES - No Prices
 // ============================================
 const PACKAGES = [
   {
     name: "Gold",
-    price: "15,000",
     icon: <FaAward />,
     color: "#f9a825",
     features: [
@@ -90,7 +174,6 @@ const PACKAGES = [
   },
   {
     name: "Platinum",
-    price: "20,000",
     icon: <FaCrown />,
     color: "#64b5f6",
     popular: true,
@@ -106,7 +189,6 @@ const PACKAGES = [
   },
   {
     name: "Diamond",
-    price: "30,000",
     icon: <FaGem />,
     color: "#ce93d8",
     features: [
@@ -124,39 +206,83 @@ const PACKAGES = [
 ];
 
 // ============================================
-// 🖼️ PORTFOLIO DATA
+// 🖼️ PORTFOLIO DATA - Organized by Service Categories
+// Images should be placed in public/images/{category}/ folders
 // ============================================
 const PORTFOLIO = [
-  { id: 1, type: "image", category: "Events", title: "Event Production", image: "/images/event1.jpg" },
-  { id: 2, type: "image", category: "Events", title: "Live Event", image: "/images/event2.jpg" },
-  { id: 3, type: "image", category: "Production", title: "Stage Setup", image: "/images/event3.jpg" },
-  { id: 4, type: "image", category: "Events", title: "Corporate Event", image: "/images/event4.jpg" },
-  { id: 5, type: "image", category: "Production", title: "Sound & Lighting", image: "/images/event5.jpg" },
-  { id: 6, type: "image", category: "Events", title: "Special Occasion", image: "/images/event6.jpg" },
-  { id: 7, type: "image", category: "Production", title: "Event Setup", image: "/images/event7.jpg" },
-  { id: 8, type: "image", category: "Events", title: "Live Performance", image: "/images/event8.jpg" },
+  // Events
+  { id: 1, type: "image", category: "Events", title: "Corporate Event", image: "/images/event1.jpg" },
+  { id: 2, type: "image", category: "Events", title: "Festival Decoration", image: "/images/event2.jpg" },
+  { id: 3, type: "image", category: "Events", title: "Award Ceremony", image: "/images/event3.jpg" },
+  { id: 4, type: "image", category: "Events", title: "Birthday Party", image: "/images/event4.jpg" },
+  
+  // Production
+  { id: 5, type: "image", category: "Production", title: "Stage Setup", image: "/images/event5.jpg" },
+  { id: 6, type: "image", category: "Production", title: "Sound & Lighting", image: "/images/event6.jpg" },
+  
+  // Talents
+  { id: 7, type: "image", category: "Talents", title: "Entertainment Performance", image: "/images/event7.jpg" },
+  { id: 8, type: "image", category: "Talents", title: "Dance Performance", image: "/images/event8.jpg" },
+  
+  // Wedding
+  { id: 9, type: "image", category: "Wedding", title: "Wedding Decoration", image: "/images/event9.jpg" },
+  { id: 10, type: "image", category: "Wedding", title: "Wedding Photography", image: "/images/event10.jpg" },
+  
+  // Entertainment
+  { id: 11, type: "image", category: "Entertainment", title: "Music Event", image: "/images/event11.jpg" },
+  { id: 12, type: "image", category: "Entertainment", title: "Celebrity Event", image: "/images/event12.jpg" },
+  
+  // Photography
+  { id: 13, type: "image", category: "Photography", title: "Event Coverage", image: "/images/event1.jpg" },
+  
+  // Decoration
+  { id: 14, type: "image", category: "Decoration", title: "Interior Decoration", image: "/images/event2.jpg" },
+  
+  // Hosters
+  { id: 15, type: "image", category: "Hosters", title: "Hospitality Service", image: "/images/event3.jpg" },
+  
+  // Digital
+  { id: 16, type: "image", category: "Digital", title: "Digital Campaign", image: "/images/digital-marketing.jpg" },
 ];
 
 // ============================================
-// ⭐ TESTIMONIALS DATA
+// ⭐ TESTIMONIALS DATA - Real Google Reviews
 // ============================================
 const TESTIMONIALS = [
   {
-    name: "Rajesh Kumar",
-    role: "Business Owner",
-    text: "Bee Altitude transformed our digital presence completely. Their social media management and video production helped us reach 10x more customers!",
+    name: "Soumya a Amarapurkar",
+    role: "Google Review",
+    text: "We had a wonderful experience with the team. They took care of everything and made the venue look gorgeous. Very happy with the service and would definitely choose them again.",
     rating: 5
   },
   {
-    name: "Priya Sharma",
-    role: "Startup Founder",
-    text: "The Platinum package was perfect for our startup. Professional website, great SEO results, and amazing promotional content. Highly recommended!",
+    name: "Seasame",
+    role: "Google Review",
+    text: "We had a wonderful experience with the team. They took care of everything and made the venue look gorgeous. Very happy with the service and would definitely choose them again.",
     rating: 5
   },
   {
-    name: "Vikram Patel",
-    role: "Restaurant Owner",
-    text: "Their creative team produced stunning videos and posters for our restaurant. We saw immediate increase in footfall after their digital campaign.",
+    name: "Pooja",
+    role: "Local Guide • Google Review",
+    text: "Good marketing team and I was really happy to work with them and I got a on time payment.",
+    rating: 5
+  },
+  {
+    name: "Kavita",
+    role: "Local Guide • Google Review",
+    text: "Very good influencer marketing team. Smooth process and payment was done on time.",
+    rating: 5
+  },
+  {
+    name: "Kajal Gupta",
+    role: "Local Guide • Google Review",
+    text: "One of the best decoration services we've used. The team was responsive, punctual, and very creative. The final setup was beautiful and exceeded our expectations.",
+    rating: 5
+  },
+  {
+    name: "Vegbynature r",
+    role: "Local Guide • Google Review",
+    text: "Worked with Bee Altitude team and felt the service is very good and professional.",
     rating: 5
   }
 ];
@@ -165,10 +291,10 @@ const TESTIMONIALS = [
 // 📊 STATS DATA
 // ============================================
 const STATS = [
-  { value: "500+", label: "Projects" },
-  { value: "200+", label: "Happy Clients" },
-  { value: "50+", label: "Team Members" },
-  { value: "5+", label: "Years Experience" }
+  { value: "100+", label: "Projects" },
+  { value: "100+", label: "Happy Clients" },
+  { value: "20+", label: "Team Members" },
+  { value: "2+", label: "Years Experience" }
 ];
 
 // ============================================
@@ -207,7 +333,6 @@ function Navbar() {
         <ul className={`navbar-links ${mobileMenuOpen ? 'active' : ''}`}>
           <li><a href="#home" className="navbar-link" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
           <li><a href="#services" className="navbar-link" onClick={() => setMobileMenuOpen(false)}>Services</a></li>
-          <li><a href="#pricing" className="navbar-link" onClick={() => setMobileMenuOpen(false)}>Pricing</a></li>
           <li><a href="#portfolio" className="navbar-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</a></li>
           <li><a href="#about" className="navbar-link" onClick={() => setMobileMenuOpen(false)}>About</a></li>
           <li><a href="#contact" className="navbar-link" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
@@ -244,29 +369,29 @@ function Hero() {
       <div className="container hero-content">
         <div className="hero-badge">
           <span className="pulse-dot"></span>
-          <span>Production | Talents | Events | Digital Campaign</span>
+          <span>Events | Production | Talents | Wedding | Entertainment</span>
         </div>
 
         <h1 className="hero-title">
-          Grow Your <span>Business</span> With Us!
+          Making Every <span>Event</span> Memorable!
         </h1>
 
         <p className="hero-subtitle">
-          We provide great ideas and digital solutions to elevate your brand. 
-          From stunning videos to powerful marketing campaigns - we do it all!
+          From corporate events to dream weddings, we handle everything. 
+          Events, Production, Talents, Entertainment - your complete event partner!
         </p>
 
         <div className="hero-tagline">
           <span>Your Vision</span>
           <span className="divider">|</span>
-          <span>Our Creativity</span>
+          <span>Our Expertise</span>
           <span className="divider">|</span>
-          <span>Real Impact</span>
+          <span>Perfect Events</span>
         </div>
 
         <div className="hero-buttons">
-          <a href="#pricing" className="btn btn-accent btn-lg">
-            View Packages <FaArrowRight />
+          <a href="#services" className="btn btn-accent btn-lg">
+            Our Services <FaArrowRight />
           </a>
           <a href={SITE_CONFIG.brochure} download className="btn btn-glass btn-lg">
             <FaDownload /> Download Brochure
@@ -299,38 +424,38 @@ function WhyChooseUs() {
         <div className="why-grid">
           <div className="why-content">
             <span className="section-tag">Why Choose Us</span>
-            <h2 className="section-title">The Best Solution for Your Business Growth</h2>
+            <h2 className="section-title">Your Complete Event Management Partner</h2>
             <p className="why-text">
-              At Bee Altitude, we don't just offer services – we deliver results. Our comprehensive 
-              digital marketing solutions are designed to take your business to new heights.
+              At Bee Altitude, we don't just organize events – we create unforgettable experiences. Our comprehensive 
+              event management services cover everything from corporate functions to dream weddings.
             </p>
             
             <div className="why-features">
               <div className="why-feature-item">
                 <FaRocket className="why-icon" />
                 <div>
-                  <h4>Fast Results</h4>
-                  <p>See growth within weeks, not months</p>
+                  <h4>End-to-End Solutions</h4>
+                  <p>From planning to execution, we handle everything</p>
                 </div>
               </div>
               <div className="why-feature-item">
                 <FaChartLine className="why-icon" />
                 <div>
-                  <h4>Data-Driven</h4>
-                  <p>Strategies backed by analytics</p>
+                  <h4>Professional Team</h4>
+                  <p>Experienced staff and talented performers</p>
                 </div>
               </div>
               <div className="why-feature-item">
                 <FaAward className="why-icon" />
                 <div>
-                  <h4>5+ Years Experience</h4>
-                  <p>Trusted by 200+ happy clients</p>
+                  <h4>100+ Successful Events</h4>
+                  <p>Trusted by 100+ happy clients</p>
                 </div>
               </div>
             </div>
 
             <a href="#contact" className="btn btn-accent">
-              Start Growing Today <FaArrowRight />
+              Plan Your Event <FaArrowRight />
             </a>
           </div>
 
@@ -344,15 +469,15 @@ function WhyChooseUs() {
 }
 
 // Services Section
-function Services() {
+function Services({ onViewGallery }) {
   return (
     <section id="services" className="services">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">What We Do</span>
-          <h2 className="section-title">Our Services</h2>
+          <span className="section-tag">Our Offered Services</span>
+          <h2 className="section-title">What We Do</h2>
           <p className="section-subtitle">
-            Complete digital solutions to grow your business and elevate your brand presence
+            Complete event management solutions for corporate events, weddings, entertainment, and more
           </p>
         </div>
 
@@ -367,29 +492,31 @@ function Services() {
                   <li key={i}><FaCheckCircle /> {feature}</li>
                 ))}
               </ul>
+              <button 
+                className="btn btn-service-gallery"
+                onClick={() => onViewGallery(service.category)}
+              >
+                View Gallery <FaArrowRight />
+              </button>
             </div>
           ))}
-        </div>
-
-        {/* Services Banner */}
-        <div className="services-banner">
-          <img src="/images/digital-marketing.jpg" alt="Digital Marketing Services" />
         </div>
       </div>
     </section>
   );
 }
 
-// Pricing Section
+// Pricing Section - Digital Marketing Packages (No Prices)
 function Pricing() {
   return (
-    <section id="pricing" className="pricing">
+    <section id="packages" className="pricing">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Affordable Plans</span>
+          <span className="section-tag">Digital Marketing</span>
           <h2 className="section-title">Our Exclusive Packages</h2>
           <p className="section-subtitle">
-            Elevate your digital presence at a fraction of the cost. Choose from 6, 12, or 24 months plans.
+            Elevate your digital presence with our comprehensive marketing solutions. 
+            Choose from 6, 12, or 24 months plans.
           </p>
         </div>
 
@@ -401,42 +528,28 @@ function Pricing() {
                 {pkg.icon}
               </div>
               <h3 className="pricing-name">{pkg.name}</h3>
-              <div className="pricing-price">
-                <span className="currency">₹</span>
-                <span className="amount">{pkg.price}</span>
-                <span className="period">/month</span>
-              </div>
               <ul className="pricing-features">
                 {pkg.features.map((feature, i) => (
                   <li key={i}><FaCheckCircle className="check-icon" /> {feature}</li>
                 ))}
               </ul>
               <a href="#contact" className="btn btn-accent btn-block">
-                Get Started
+                Get Quote
               </a>
             </div>
           ))}
         </div>
 
-        {/* Pricing Info Banner */}
-        <div className="pricing-banner">
-          <img src="/images/packages-info.jpg" alt="Package Details" />
-          <div className="pricing-banner-overlay">
-            <h3>Solve Your Problems with 1 Solution</h3>
-            <p>Custom packages available for enterprise needs</p>
-            <a href={SITE_CONFIG.brochure} download className="btn btn-accent">
-              <FaDownload /> Download Brochure
-            </a>
-          </div>
-        </div>
+        <p className="pricing-note">
+          Contact us for detailed pricing. Custom packages available for enterprise needs.
+        </p>
       </div>
     </section>
   );
 }
 
 // Portfolio Section
-function Portfolio() {
-  const [filter, setFilter] = useState('All');
+function Portfolio({ filter, setFilter }) {
   const [lightbox, setLightbox] = useState(null);
 
   const categories = ['All', ...new Set(PORTFOLIO.map(item => item.category))];
@@ -449,7 +562,10 @@ function Portfolio() {
           <span className="section-tag">Our Work</span>
           <h2 className="section-title">Portfolio</h2>
           <p className="section-subtitle">
-            A glimpse of our creative work and successful projects
+            {filter === 'All' 
+              ? 'A glimpse of our creative work and successful projects'
+              : `Showcasing our ${filter} work`
+            }
           </p>
         </div>
 
@@ -482,6 +598,12 @@ function Portfolio() {
           ))}
         </div>
 
+        {filtered.length === 0 && (
+          <div className="portfolio-empty">
+            <p>No images available for this category yet. Check back soon!</p>
+          </div>
+        )}
+
         <div className="portfolio-cta">
           <a href={SITE_CONFIG.instagram} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
             <FaInstagram /> See More on Instagram
@@ -508,52 +630,52 @@ function About() {
       <div className="container">
         <div className="about-grid">
           <div className="about-image">
-            <img src="/images/grow-business.jpg" alt="Bee Altitude - Grow Your Business" />
+            <img src="/images/grow-business.jpg" alt="Bee Altitude - Event Management" />
           </div>
 
           <div className="about-content">
             <span className="section-tag">About Us</span>
-            <h2 className="section-title">Your Growth Partner</h2>
+            <h2 className="section-title">Your Trusted Event Partner</h2>
             
             <p className="about-text">
-              <strong>Bee Altitude</strong> is Bangalore's leading digital marketing and creative agency. 
-              We help businesses grow with powerful digital strategies, stunning visuals, and 
-              result-driven marketing campaigns.
+              <strong>Bee Altitude</strong> is Bangalore's leading event management company. 
+              We specialize in creating memorable experiences for corporate events, weddings, 
+              entertainment shows, and all types of celebrations.
             </p>
             
             <p className="about-text">
-              From startups to established brands, we've helped hundreds of businesses 
-              elevate their digital presence and achieve real results. Our team combines 
-              creativity with data-driven strategies to deliver exceptional outcomes.
+              From manpower management to interior decoration, from photography to entertainment 
+              performances - we offer end-to-end event solutions. Our dedicated team ensures 
+              every event is executed flawlessly.
             </p>
 
             <div className="about-features">
               <div className="about-feature">
                 <div className="feature-icon"><FaChartLine /></div>
                 <div>
-                  <h4>Result Driven</h4>
-                  <p>Strategies focused on real business growth</p>
+                  <h4>Complete Solutions</h4>
+                  <p>Events, Production, Talents, Entertainment - All in One</p>
                 </div>
               </div>
               <div className="about-feature">
                 <div className="feature-icon"><FaVideo /></div>
                 <div>
-                  <h4>Creative Content</h4>
-                  <p>Eye-catching videos, posters & designs</p>
+                  <h4>Professional Coverage</h4>
+                  <p>Photography & Videography Services</p>
                 </div>
               </div>
               <div className="about-feature">
                 <div className="feature-icon"><FaBullhorn /></div>
                 <div>
-                  <h4>Digital Marketing</h4>
-                  <p>SEO, Ads, Social Media & more</p>
+                  <h4>Hospitality Services</h4>
+                  <p>Hosters, Catering, Guest Management</p>
                 </div>
               </div>
             </div>
 
             <div className="about-buttons">
               <a href="#contact" className="btn btn-accent">
-                Work With Us <FaArrowRight />
+                Plan Your Event <FaArrowRight />
               </a>
               <a href={SITE_CONFIG.whatsapp} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                 <FaWhatsapp /> WhatsApp
@@ -566,36 +688,115 @@ function About() {
   );
 }
 
-// Testimonials Section
+// Testimonials Section - Slider with Google Reviews
 function Testimonials() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % TESTIMONIALS.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  };
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="testimonials">
       <div className="container">
-        <div className="section-header">
-          <span className="section-tag">Testimonials</span>
-          <h2 className="section-title">What Our Clients Say</h2>
-          <p className="section-subtitle">
-            Real results from real businesses we've helped grow
-          </p>
+        <div className="testimonials-header">
+          <div className="testimonials-title-area">
+            <h2 className="testimonials-main-title">Client Speaks</h2>
+            <a 
+              href="https://www.google.com/maps/place/BEE+ALTITUDE.+events.%2FMan+Power%2Fproduction%2Ftalents%2FDigital+Marketing/@12.9305068,77.6075783,1346m/data=!3m1!1e3!4m8!3m7!1s0x3bae15cd3bdbed9b:0x7680ad5c4971ea10!8m2!3d12.9305068!4d77.6075783!9m1!1b1!16s%2Fg%2F11ntpd2_ds" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="testimonials-link"
+            >
+              Read all client testimonials <FaArrowRight />
+            </a>
+          </div>
         </div>
 
-        <div className="testimonials-grid">
-          {TESTIMONIALS.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <div className="testimonial-stars">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className={`star ${i < testimonial.rating ? 'filled' : ''}`} />
-                ))}
-              </div>
-              <p className="testimonial-text">"{testimonial.text}"</p>
+        <div className="testimonials-slider">
+          {/* Previous cards (blurred) */}
+          <div className="slider-card slider-card-prev">
+            <div className="testimonial-card blur-card">
+              <p className="testimonial-text">
+                "{TESTIMONIALS[(currentSlide - 1 + TESTIMONIALS.length) % TESTIMONIALS.length].text}"
+              </p>
               <div className="testimonial-author">
-                <div className="author-avatar">{testimonial.name.charAt(0)}</div>
+                <div className="author-avatar">
+                  {TESTIMONIALS[(currentSlide - 1 + TESTIMONIALS.length) % TESTIMONIALS.length].name.charAt(0)}
+                </div>
                 <div>
-                  <div className="author-name">{testimonial.name}</div>
-                  <div className="author-role">{testimonial.role}</div>
+                  <div className="author-name">
+                    {TESTIMONIALS[(currentSlide - 1 + TESTIMONIALS.length) % TESTIMONIALS.length].name}
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Current card (main) */}
+          <div className="slider-card slider-card-current">
+            <div className="testimonial-card main-card">
+              <div className="testimonial-header">
+                <div className="google-badge">
+                  <img src="https://www.google.com/favicon.ico" alt="Google" className="google-icon" />
+                  <span>Google Review</span>
+                </div>
+                <div className="testimonial-stars">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="star filled" />
+                  ))}
+                </div>
+              </div>
+              <p className="testimonial-text main-text">"{TESTIMONIALS[currentSlide].text}"</p>
+              <div className="testimonial-author">
+                <div className="author-avatar main-avatar">{TESTIMONIALS[currentSlide].name.charAt(0)}</div>
+                <div>
+                  <div className="author-name main-name">{TESTIMONIALS[currentSlide].name}</div>
+                  <div className="author-role">{TESTIMONIALS[currentSlide].role}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Next cards (blurred) */}
+          <div className="slider-card slider-card-next">
+            <div className="testimonial-card blur-card">
+              <p className="testimonial-text">
+                "{TESTIMONIALS[(currentSlide + 1) % TESTIMONIALS.length].text}"
+              </p>
+              <div className="testimonial-author">
+                <div className="author-avatar">
+                  {TESTIMONIALS[(currentSlide + 1) % TESTIMONIALS.length].name.charAt(0)}
+                </div>
+                <div>
+                  <div className="author-name">
+                    {TESTIMONIALS[(currentSlide + 1) % TESTIMONIALS.length].name}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Slider Dots */}
+        <div className="slider-dots">
+          {TESTIMONIALS.map((_, index) => (
+            <button
+              key={index}
+              className={`slider-dot ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
           ))}
         </div>
       </div>
@@ -609,8 +810,8 @@ function CallToAction() {
     <section className="cta-section">
       <div className="container">
         <div className="cta-content">
-          <h2>Ready to Grow Your Business?</h2>
-          <p>Get started today with our affordable packages. First consultation is FREE!</p>
+          <h2>Ready to Plan Your Event?</h2>
+          <p>Get in touch today for a free consultation. Let's create something memorable together!</p>
           <div className="cta-buttons">
             <a href={`tel:${SITE_CONFIG.phone}`} className="btn btn-accent btn-lg">
               <FaPhone /> Call Now: {SITE_CONFIG.phone}
@@ -651,10 +852,10 @@ function Contact() {
         <div className="contact-grid">
           <div className="contact-info">
             <span className="section-tag">Get In Touch</span>
-            <h2 className="section-title">Let's Grow Your Business</h2>
+            <h2 className="section-title">Let's Plan Your Event</h2>
             <p className="contact-text">
-              Ready to elevate your digital presence? Contact us today for a free consultation 
-              and let's discuss how we can help your business grow!
+              Ready to create an unforgettable event? Contact us today for a free consultation 
+              and let's discuss how we can make your vision come to life!
             </p>
 
             <div className="contact-details">
@@ -731,16 +932,17 @@ function Contact() {
 
             <div className="form-group">
               <select name="service" value={formData.service} onChange={handleChange} required>
-                <option value="">Select Service / Package</option>
-                <option value="Gold Package - ₹15,000/month">Gold Package - ₹15,000/month</option>
-                <option value="Platinum Package - ₹20,000/month">Platinum Package - ₹20,000/month</option>
-                <option value="Diamond Package - ₹30,000/month">Diamond Package - ₹30,000/month</option>
-                <option value="Video Production">Video Production</option>
-                <option value="Website Development">Website Development</option>
-                <option value="Social Media Management">Social Media Management</option>
-                <option value="Digital Campaign">Digital Campaign</option>
-                <option value="Graphic Design">Graphic Design</option>
-                <option value="Custom Package">Custom Package</option>
+                <option value="">Select Event Type</option>
+                <option value="Corporate Event">Corporate Event</option>
+                <option value="Wedding Event">Wedding Event</option>
+                <option value="Entertainment Event">Entertainment Event</option>
+                <option value="Birthday Party">Birthday Party</option>
+                <option value="Festival Decoration">Festival Decoration</option>
+                <option value="Award Ceremony">Award Ceremony</option>
+                <option value="Photography & Videography">Photography & Videography</option>
+                <option value="Stage Setup & Production">Stage Setup & Production</option>
+                <option value="Manpower & Hosters">Manpower & Hosters</option>
+                <option value="Other Event">Other Event</option>
               </select>
             </div>
 
@@ -777,13 +979,12 @@ function Footer() {
               <span>{SITE_CONFIG.name}</span>
             </div>
             <p>{SITE_CONFIG.tagline}</p>
-            <p style={{ marginTop: '8px', color: 'var(--accent)' }}>"Solve your problems with 1 Solution"</p>
+            <p style={{ marginTop: '8px', color: 'var(--gray-400)' }}>"Your Complete Event Management Partner"</p>
           </div>
 
           <div className="footer-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
@@ -834,14 +1035,28 @@ function WhatsAppFloat() {
 // 🚀 MAIN APP
 // ============================================
 function App() {
+  const [galleryFilter, setGalleryFilter] = useState('All');
+
+  // Function to set gallery filter and scroll to portfolio
+  const handleViewGallery = (category) => {
+    setGalleryFilter(category);
+    // Scroll to portfolio section
+    setTimeout(() => {
+      const portfolioSection = document.getElementById('portfolio');
+      if (portfolioSection) {
+        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <div className="app">
       <Navbar />
       <Hero />
       <WhyChooseUs />
-      <Services />
+      <Services onViewGallery={handleViewGallery} />
       <Pricing />
-      <Portfolio />
+      <Portfolio filter={galleryFilter} setFilter={setGalleryFilter} />
       <About />
       <Testimonials />
       <CallToAction />
