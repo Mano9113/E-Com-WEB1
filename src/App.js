@@ -165,10 +165,10 @@ const TESTIMONIALS = [
 // 📊 STATS DATA
 // ============================================
 const STATS = [
-  { value: "100+", label: "Projects" },
-  { value: "100+", label: "Happy Clients" },
-  { value: "20+", label: "Team Members" },
-  { value: "2+", label: "Years Experience" }
+  { value: "500+", label: "Projects" },
+  { value: "200+", label: "Happy Clients" },
+  { value: "50+", label: "Team Members" },
+  { value: "5+", label: "Years Experience" }
 ];
 
 // ============================================
@@ -323,8 +323,8 @@ function WhyChooseUs() {
               <div className="why-feature-item">
                 <FaAward className="why-icon" />
                 <div>
-                  <h4>2+ Years Experience</h4>
-                  <p>Trusted by 100+ happy clients</p>
+                  <h4>5+ Years Experience</h4>
+                  <p>Trusted by 200+ happy clients</p>
                 </div>
               </div>
             </div>
